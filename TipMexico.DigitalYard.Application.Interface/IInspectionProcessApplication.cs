@@ -5,6 +5,6 @@ namespace TipMexico.DigitalYard.Application.Interface
 {
     public interface IInspectionProcessApplication
     {
-        Task<Response<int>> InspectionProcessStartAsync(InspecctionProcessStartDTO payload);
+        Task<Response<int>> InspectionProcessStartAsync(InspecctionProcessStartDTO payload, CancellationToken cancellationToken);
     }
 }

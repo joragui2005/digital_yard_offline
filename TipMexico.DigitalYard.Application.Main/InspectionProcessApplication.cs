@@ -18,11 +18,12 @@ namespace TipMexico.DigitalYard.Application.Main
             InspectionProcessRepository = inspectionProcessRepository;
         }
 
-        public async Task<Response<int>> InspectionProcessStartAsync(InspecctionProcessStartDTO payload)
+        public async Task<Response<int>> InspectionProcessStartAsync(InspecctionProcessStartDTO payload, CancellationToken cancellationToken)
         {
             try
             {
                 var id = await InspectionProcessRepository.InspectionProcessStartAsync(payload.HeaderId, payload.UserId);
+                var doc = await InspectionProcessRepository.InspectionProcessStartEntityAsync(payload.HeaderId, payload.UserId, cancellationToken);
                 if (id > 0)
                 {
                     return ResponseState<int>.OK("Success", id);

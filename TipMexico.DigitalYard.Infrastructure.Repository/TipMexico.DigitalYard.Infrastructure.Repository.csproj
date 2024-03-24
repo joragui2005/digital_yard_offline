@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TipMexico.DigitalYard.Infrastructure.Data\TipMexico.DigitalYard.Infrastructure.Data.csproj" />
     <ProjectReference Include="..\TipMexico.DigitalYard.Infrastructure.Interface\TipMexico.DigitalYard.Infrastructure.Interface.csproj" />
     <ProjectReference Include="..\TipMexico.DigitalYard.Transversal.Common\TipMexico.DigitalYard.Transversal.Common.csproj" />
   </ItemGroup>

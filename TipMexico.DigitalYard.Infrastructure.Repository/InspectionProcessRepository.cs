@@ -1,9 +1,11 @@
 ﻿using Dapper;
+using Microsoft.EntityFrameworkCore;
 using Oracle.ManagedDataAccess.Client;
 using Oracle.ManagedDataAccess.Types;
 using System.Data;
 using System.Security.Policy;
 using TipMexico.DigitalYard.Domain.Entity;
+using TipMexico.DigitalYard.Infrastructure.Data;
 using TipMexico.DigitalYard.Infrastructure.Interface;
 using TipMexico.DigitalYard.Transversal.Common;
 using static TipMexico.DigitalYard.Transversal.Common.Enums;
@@ -13,10 +15,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Repository
     public class InspectionProcessRepository : IInspectionProcessRepository
     {
         private readonly IConnectionFactory ConnectionFactory;
+        private readonly DigitalYardContext _context;
 
-        public InspectionProcessRepository(IConnectionFactory connectionFactory)
+        public InspectionProcessRepository(IConnectionFactory connectionFactory,DigitalYardContext context)
         {
             ConnectionFactory = connectionFactory;
+            _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
         public async Task<int> InspectionProcessStartAsync(int headerId, int userId)
@@ -42,5 +46,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Repository
 
             return header is null ? 0 :  header.HEADER_ID;
         }
+
+        public async Task<decimal> InspectionProcessStartEntityAsync(int headerId, int userId, CancellationToken cancellationToken)
+        {
+            var header =  await _context.XxdyInsHeaders.FirstOrDefaultAsync(x => x.HeaderId == headerId, cancellationToken);
+            return header is null ? 0 : header.HeaderId;
+        }
+         
     }
 }

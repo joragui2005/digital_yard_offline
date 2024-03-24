@@ -23,9 +23,9 @@ namespace TipMexico.DigitalYard.WebAPI.Controllers
 
         [HttpPost, Route("InspectionProcessStart")]
 
-        public async Task<ActionResult<Response<int>>> InspectionProcessStart(InspecctionProcessStartDTO payload)
+        public async Task<ActionResult<Response<int>>> InspectionProcessStart(InspecctionProcessStartDTO payload, CancellationToken cancellationToken)
         {
-            var resp = await InspectionProcessApplication.InspectionProcessStartAsync(payload);
+            var resp = await InspectionProcessApplication.InspectionProcessStartAsync(payload,cancellationToken);
 
             return StatusCode((int)resp.StatusCode, resp);
         }
