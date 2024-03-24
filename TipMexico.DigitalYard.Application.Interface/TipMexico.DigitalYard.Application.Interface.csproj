@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TipMexico.DigitalYard.Application.DTO\TipMexico.DigitalYard.Application.DTO.csproj" />
+    <ProjectReference Include="..\TipMexico.DigitalYard.Transversal.Common\TipMexico.DigitalYard.Transversal.Common.csproj" />
+  </ItemGroup>
+
+</Project>

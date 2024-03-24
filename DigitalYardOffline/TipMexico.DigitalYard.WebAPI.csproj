@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>af431dc1-123f-4ac1-b32f-33f0cbca1433</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JsonApiDotNetCore" Version="5.5.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.6" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Business\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TipMexico.DigitalYard.Application.DTO\TipMexico.DigitalYard.Application.DTO.csproj" />
+    <ProjectReference Include="..\TipMexico.DigitalYard.Application.Interface\TipMexico.DigitalYard.Application.Interface.csproj" />
+    <ProjectReference Include="..\TipMexico.DigitalYard.Application.Main\TipMexico.DigitalYard.Application.Main.csproj" />
+    <ProjectReference Include="..\TipMexico.DigitalYard.Infrastructure.Data\TipMexico.DigitalYard.Infrastructure.Data.csproj" />
+    <ProjectReference Include="..\TipMexico.DigitalYard.Infrastructure.Interface\TipMexico.DigitalYard.Infrastructure.Interface.csproj" />
+    <ProjectReference Include="..\TipMexico.DigitalYard.Infrastructure.Repository\TipMexico.DigitalYard.Infrastructure.Repository.csproj" />
+    <ProjectReference Include="..\TipMexico.DigitalYard.Transversal.Common\TipMexico.DigitalYard.Transversal.Common.csproj" />
+  </ItemGroup>
+
+</Project>
