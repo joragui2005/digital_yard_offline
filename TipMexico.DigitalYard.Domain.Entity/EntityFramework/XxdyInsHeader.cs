@@ -5,7 +5,7 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
 {
     public partial class XxdyInsHeader
     {
-        public decimal HeaderId { get; set; }
+        public int HeaderId { get; set; }
         public decimal BranchId { get; set; }
         public string SerialNumber { get; set; } = null!;
         public string? Vin { get; set; }

@@ -47,7 +47,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Repository
             return header is null ? 0 :  header.HEADER_ID;
         }
 
-        public async Task<decimal> InspectionProcessStartEntityAsync(int headerId, int userId, CancellationToken cancellationToken)
+        public async Task<int> InspectionProcessStartEntityAsync(int headerId, int userId, CancellationToken cancellationToken)
         {
             var header =  await _context.XxdyInsHeaders.FirstOrDefaultAsync(x => x.HeaderId == headerId, cancellationToken);
             return header is null ? 0 : header.HeaderId;

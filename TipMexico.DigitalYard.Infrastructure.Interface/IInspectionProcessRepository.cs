@@ -3,6 +3,6 @@
     public interface IInspectionProcessRepository
     {
         Task<int> InspectionProcessStartAsync(int headerId, int userId);
-        Task<decimal> InspectionProcessStartEntityAsync(int headerId, int userId, CancellationToken cancellationToken);
+        Task<int> InspectionProcessStartEntityAsync(int headerId, int userId, CancellationToken cancellationToken);
     }
 }

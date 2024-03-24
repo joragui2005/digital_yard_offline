@@ -7492,7 +7492,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_INS_HEADERS", "YARD");
 
                 entity.Property(e => e.HeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("HEADER_ID");
 
                 entity.Property(e => e.ActualInspector)
