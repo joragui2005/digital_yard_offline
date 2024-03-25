@@ -5,24 +5,24 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
 {
     public partial class XxdyOdtWorkLoad
     {
-        public decimal WorkloadId { get; set; }
-        public decimal OdtHeaderId { get; set; }
+        public int WorkloadId { get; set; }
+        public int OdtHeaderId { get; set; }
         public DateTime TerminationDate { get; set; }
-        public decimal PeriodId { get; set; }
-        public decimal WeekNumber { get; set; }
-        public decimal TeamId { get; set; }
-        public decimal PersonId { get; set; }
-        public decimal WorkHours { get; set; }
+        public int PeriodId { get; set; }
+        public int WeekNumber { get; set; }
+        public int TeamId { get; set; }
+        public int PersonId { get; set; }
+        public int WorkHours { get; set; }
         public string? ContextValue { get; set; }
         public string? CustomField1 { get; set; }
         public string? CustomField2 { get; set; }
         public string? CustomField3 { get; set; }
         public string? CustomField4 { get; set; }
         public string? CustomField5 { get; set; }
-        public decimal? CreatedBy { get; set; }
+        public int? CreatedBy { get; set; }
         public DateTime? CreationDate { get; set; }
-        public decimal? LastUpdatedBy { get; set; }
+        public int? LastUpdatedBy { get; set; }
         public DateTime? LastUpdateDate { get; set; }
-        public decimal? PeriodYear { get; set; }
+        public int? PeriodYear { get; set; }
     }
 }

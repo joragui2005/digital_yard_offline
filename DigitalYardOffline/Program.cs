@@ -17,7 +17,7 @@ var environmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT
 IConfiguration _configuration = new ConfigurationBuilder()
                .AddJsonFile("appsettings.json")
                .AddJsonFile($"appsettings.{environmentName}.json")
-               .AddUserSecrets(Assembly.GetExecutingAssembly(),true)
+               .AddUserSecrets(Assembly.GetExecutingAssembly(), true)
                .Build();
 
 var builder = WebApplication.CreateBuilder(args);
@@ -49,7 +49,7 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
-{ 
+{
     app.UseSwaggerDocumentation();
 }
 

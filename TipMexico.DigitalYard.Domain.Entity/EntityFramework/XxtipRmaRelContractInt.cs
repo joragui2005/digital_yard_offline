@@ -5,8 +5,8 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
 {
     public partial class XxtipRmaRelContractInt
     {
-        public decimal RelationContractId { get; set; }
-        public decimal? FolioDl { get; set; }
+        public int RelationContractId { get; set; }
+        public int? FolioDl { get; set; }
         public string? ContractKnownas { get; set; }
         public string? FirstName { get; set; }
         public string? MiddleName { get; set; }
@@ -65,13 +65,13 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
         public string? Status { get; set; }
         public DateTime? CreationDate { get; set; }
         public DateTime? LastUpdateDate { get; set; }
-        public decimal? CreatedBy { get; set; }
-        public decimal? LastUpdatedBy { get; set; }
-        public decimal? ParticipantId { get; set; }
-        public decimal? DlCustomerId { get; set; }
+        public int? CreatedBy { get; set; }
+        public int? LastUpdatedBy { get; set; }
+        public int? ParticipantId { get; set; }
+        public int? DlCustomerId { get; set; }
         public string? CustomerNumber { get; set; }
         public string? ContractMarco { get; set; }
         public DateTime? DateContractMarco { get; set; }
-        public decimal? RolId { get; set; }
+        public int? RolId { get; set; }
     }
 }

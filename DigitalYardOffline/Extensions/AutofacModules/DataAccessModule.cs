@@ -27,7 +27,7 @@ namespace TipMexico.DigitalYard.WebAPI.Extensions.AutofacModules
             #endregion
 
             #region Database
-            builder.RegisterType<ConnectionFactory>().As<IConnectionFactory>().InstancePerLifetimeScope();
+            builder.RegisterType<ConnectionFactory>().As<IConnectionFactory>().SingleInstance();
 
             builder
             .Register(c =>

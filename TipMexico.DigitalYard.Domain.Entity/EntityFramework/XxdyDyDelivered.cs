@@ -5,8 +5,8 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
 {
     public partial class XxdyDyDelivered
     {
-        public decimal LineId { get; set; }
-        public decimal RowNumber { get; set; }
+        public int LineId { get; set; }
+        public int RowNumber { get; set; }
         public string? SerialNumber { get; set; }
         public string? AssetNumber { get; set; }
         public string? ItemCode { get; set; }
@@ -65,9 +65,9 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
         public string? CustomField3 { get; set; }
         public string? CustomField4 { get; set; }
         public string? CustomField5 { get; set; }
-        public decimal? CreatedBy { get; set; }
+        public int? CreatedBy { get; set; }
         public DateTime? CreationDate { get; set; }
-        public decimal? LastUpdatedBy { get; set; }
+        public int? LastUpdatedBy { get; set; }
         public DateTime? LastUpdateDate { get; set; }
     }
 }

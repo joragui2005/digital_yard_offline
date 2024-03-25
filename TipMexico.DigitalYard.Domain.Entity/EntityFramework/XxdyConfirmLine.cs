@@ -5,7 +5,7 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
 {
     public partial class XxdyConfirmLine
     {
-        public decimal DeLineId { get; set; }
+        public int DeLineId { get; set; }
         public string? ParentSerial { get; set; }
         public string? SerialNumber { get; set; }
         public string? ProcessFlag { get; set; }

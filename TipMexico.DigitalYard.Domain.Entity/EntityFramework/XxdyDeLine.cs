@@ -5,9 +5,9 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
 {
     public partial class XxdyDeLine
     {
-        public decimal LineId { get; set; }
-        public decimal HeaderId { get; set; }
-        public decimal LineNumber { get; set; }
+        public int LineId { get; set; }
+        public int HeaderId { get; set; }
+        public int LineNumber { get; set; }
         public string LineType { get; set; } = null!;
         public string SerialNumber { get; set; } = null!;
         public string PlateNumber { get; set; } = null!;
@@ -25,21 +25,21 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
         public string? CustomField3 { get; set; }
         public string? CustomField4 { get; set; }
         public string? CustomField5 { get; set; }
-        public decimal? CreatedBy { get; set; }
+        public int? CreatedBy { get; set; }
         public DateTime? CreationDate { get; set; }
-        public decimal? LastUpdatedBy { get; set; }
+        public int? LastUpdatedBy { get; set; }
         public DateTime? LastUpdateDate { get; set; }
-        public decimal? LineBranchId { get; set; }
+        public int? LineBranchId { get; set; }
         public string? WorkshopName { get; set; }
         public string? ManufacturerName { get; set; }
         public string? Vin { get; set; }
         public string? ItemFound { get; set; }
-        public decimal? ConfirmBy { get; set; }
+        public int? ConfirmBy { get; set; }
         public DateTime? ConfirmDate { get; set; }
-        public decimal? CancelBy { get; set; }
+        public int? CancelBy { get; set; }
         public DateTime? CancelDate { get; set; }
         public string? Comments { get; set; }
         public string? AssetNumber { get; set; }
-        public decimal? DeliveryId { get; set; }
+        public int? DeliveryId { get; set; }
     }
 }

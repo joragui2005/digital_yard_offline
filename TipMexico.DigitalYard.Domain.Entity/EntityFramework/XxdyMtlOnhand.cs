@@ -9,8 +9,8 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
         public string? ItemDescription { get; set; }
         public string? OrganizationCode { get; set; }
         public string SubinventoryCode { get; set; } = null!;
-        public decimal? OnHand { get; set; }
-        public decimal InventoryItemId { get; set; }
-        public decimal OrganizationId { get; set; }
+        public int? OnHand { get; set; }
+        public int InventoryItemId { get; set; }
+        public int OrganizationId { get; set; }
     }
 }

@@ -5,23 +5,23 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
 {
     public partial class XxdyDyProductivity
     {
-        public decimal ProductivityId { get; set; }
-        public decimal PeriodId { get; set; }
-        public decimal WeekNumber { get; set; }
-        public decimal PersonId { get; set; }
-        public decimal TeamId { get; set; }
-        public decimal BranchId { get; set; }
-        public decimal TeamHeadId { get; set; }
+        public int ProductivityId { get; set; }
+        public int PeriodId { get; set; }
+        public int WeekNumber { get; set; }
+        public int PersonId { get; set; }
+        public int TeamId { get; set; }
+        public int BranchId { get; set; }
+        public int TeamHeadId { get; set; }
         public string? WStartDate { get; set; }
         public string? WEndDate { get; set; }
-        public decimal? WByPeriod { get; set; }
-        public decimal? DLaborados { get; set; }
-        public decimal? DNomina { get; set; }
-        public decimal? TExtra { get; set; }
-        public decimal? TIndirecto { get; set; }
-        public decimal? TOdt { get; set; }
-        public decimal? ODays { get; set; }
-        public decimal? PdtyPercent { get; set; }
+        public int? WByPeriod { get; set; }
+        public int? DLaborados { get; set; }
+        public int? DNomina { get; set; }
+        public int? TExtra { get; set; }
+        public int? TIndirecto { get; set; }
+        public int? TOdt { get; set; }
+        public int? ODays { get; set; }
+        public int? PdtyPercent { get; set; }
         public string? WeekStatus { get; set; }
         public string? ExtraComment { get; set; }
         public string? IndirectoComment { get; set; }
@@ -32,15 +32,15 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
         public string? CustomField3 { get; set; }
         public string? CustomField4 { get; set; }
         public string? CustomField5 { get; set; }
-        public decimal? CreatedBy { get; set; }
+        public int? CreatedBy { get; set; }
         public DateTime? CreationDate { get; set; }
-        public decimal? LastUpdatedBy { get; set; }
+        public int? LastUpdatedBy { get; set; }
         public DateTime? LastUpdateDate { get; set; }
-        public decimal? TIncapacidad { get; set; }
-        public decimal? TAusencia { get; set; }
+        public int? TIncapacidad { get; set; }
+        public int? TAusencia { get; set; }
         public string? IncapacidadComment { get; set; }
         public string? AusenciaComment { get; set; }
-        public decimal? TVacaciones { get; set; }
+        public int? TVacaciones { get; set; }
         public string? VacacionesComment { get; set; }
     }
 }

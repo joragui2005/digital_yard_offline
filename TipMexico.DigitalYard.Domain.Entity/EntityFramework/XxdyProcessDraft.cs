@@ -5,10 +5,10 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
 {
     public partial class XxdyProcessDraft
     {
-        public decimal InterfaceId { get; set; }
-        public decimal? DeLineId { get; set; }
-        public decimal? DeliveryId { get; set; }
-        public decimal? ActivationId { get; set; }
+        public int InterfaceId { get; set; }
+        public int? DeLineId { get; set; }
+        public int? DeliveryId { get; set; }
+        public int? ActivationId { get; set; }
         public string? SerialNumber { get; set; }
         public string? ContractNumber { get; set; }
         public string? ProcessFlag { get; set; }

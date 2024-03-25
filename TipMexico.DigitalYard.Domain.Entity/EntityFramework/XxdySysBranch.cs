@@ -5,7 +5,7 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
 {
     public partial class XxdySysBranch
     {
-        public decimal BranchId { get; set; }
+        public int BranchId { get; set; }
         public string BranchNumber { get; set; } = null!;
         public string BranchName { get; set; } = null!;
         public string ShortName { get; set; } = null!;
@@ -23,16 +23,16 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
         public string? Phone { get; set; }
         public string? Fax { get; set; }
         public string? Email { get; set; }
-        public decimal EntityId { get; set; }
+        public int EntityId { get; set; }
         public string? ContextValue { get; set; }
         public string? CustomField1 { get; set; }
         public string? CustomField2 { get; set; }
         public string? CustomField3 { get; set; }
         public string? CustomField4 { get; set; }
         public string? CustomField5 { get; set; }
-        public decimal? CreatedBy { get; set; }
+        public int? CreatedBy { get; set; }
         public DateTime? CreationDate { get; set; }
-        public decimal? LastUpdatedBy { get; set; }
+        public int? LastUpdatedBy { get; set; }
         public DateTime? LastUpdateDate { get; set; }
     }
 }

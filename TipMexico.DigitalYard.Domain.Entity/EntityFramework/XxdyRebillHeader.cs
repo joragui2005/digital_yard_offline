@@ -5,8 +5,8 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
 {
     public partial class XxdyRebillHeader
     {
-        public decimal InterfaceId { get; set; }
-        public decimal? InsHeaderId { get; set; }
+        public int InterfaceId { get; set; }
+        public int? InsHeaderId { get; set; }
         public string? Patio { get; set; }
         public string? CustomerNumber { get; set; }
         public string? ContractNumber { get; set; }
@@ -20,7 +20,7 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
         public string? Eje2EspesorBalata { get; set; }
         public string? PlacaVin { get; set; }
         public string? Manivela { get; set; }
-        public decimal? RbHeaderId { get; set; }
+        public int? RbHeaderId { get; set; }
         public string? ContextValue { get; set; }
         public string? CustomField1 { get; set; }
         public string? CustomField2 { get; set; }
@@ -28,9 +28,9 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
         public string? CustomField4 { get; set; }
         public string? CustomField5 { get; set; }
         public string? Status { get; set; }
-        public decimal? CreatedBy { get; set; }
+        public int? CreatedBy { get; set; }
         public DateTime? CreationDate { get; set; }
-        public decimal? LastUpdatedBy { get; set; }
+        public int? LastUpdatedBy { get; set; }
         public DateTime? LastUpdateDate { get; set; }
     }
 }

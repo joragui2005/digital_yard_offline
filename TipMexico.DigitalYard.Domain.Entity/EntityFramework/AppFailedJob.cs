@@ -5,7 +5,7 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
 {
     public partial class AppFailedJob
     {
-        public decimal Id { get; set; }
+        public int Id { get; set; }
         public string Connection { get; set; } = null!;
         public string Queue { get; set; } = null!;
         public string Payload { get; set; } = null!;

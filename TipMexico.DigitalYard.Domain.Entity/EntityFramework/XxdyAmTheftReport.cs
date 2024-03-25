@@ -5,7 +5,7 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
 {
     public partial class XxdyAmTheftReport
     {
-        public decimal ReportId { get; set; }
+        public int ReportId { get; set; }
         public string? AssetNumber { get; set; }
         public DateTime RequestDate { get; set; }
         public string ReportPlate { get; set; } = null!;
@@ -18,9 +18,9 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
         public string? CustomField3 { get; set; }
         public string? CustomField4 { get; set; }
         public string? CustomField5 { get; set; }
-        public decimal? CreatedBy { get; set; }
+        public int? CreatedBy { get; set; }
         public DateTime? CreationDate { get; set; }
-        public decimal? LastUpdatedBy { get; set; }
+        public int? LastUpdatedBy { get; set; }
         public DateTime? LastUpdateDate { get; set; }
     }
 }

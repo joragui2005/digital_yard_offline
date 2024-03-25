@@ -6,8 +6,8 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
     public partial class XxdyDyDailyV
     {
         public string FolioE1 { get; set; } = null!;
-        public decimal FolioE2 { get; set; }
-        public decimal FolioE3 { get; set; }
+        public int FolioE2 { get; set; }
+        public int FolioE3 { get; set; }
         public string Patio { get; set; } = null!;
         public DateTime? FechaRegistro { get; set; }
         public DateTime? FechaMovimentoE { get; set; }
@@ -23,7 +23,7 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
         public string? ClienteE { get; set; }
         public string? Fabricante { get; set; }
         public string? Modelo { get; set; }
-        public decimal? Prioridad { get; set; }
+        public int? Prioridad { get; set; }
         public string? ComentarioPrioridad { get; set; }
         public string? EstatusActual { get; set; }
         public string? EstatusInspeccion { get; set; }
@@ -31,8 +31,8 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
         public string? EstatusCalidad { get; set; }
         public string? EstatusRt { get; set; }
         public string? FolioS1 { get; set; }
-        public decimal? FolioS2 { get; set; }
-        public decimal? FolioS3 { get; set; }
+        public int? FolioS2 { get; set; }
+        public int? FolioS3 { get; set; }
         public DateTime? FechaSalida { get; set; }
         public string? TipoOperacionS { get; set; }
         public string? TipoPuertaS { get; set; }

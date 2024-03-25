@@ -5,7 +5,7 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
 {
     public partial class XxdySysUser
     {
-        public decimal UserId { get; set; }
+        public int UserId { get; set; }
         public string EmailAddress { get; set; } = null!;
         public string EncryptedUserPassword { get; set; } = null!;
         public string? FullName { get; set; }
@@ -13,8 +13,8 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
         public string? MiddleName { get; set; }
         public string? LastName { get; set; }
         public string? PhoneNumber { get; set; }
-        public decimal? EmployeeId { get; set; }
-        public decimal? RmaMenuId { get; set; }
+        public int? EmployeeId { get; set; }
+        public int? RmaMenuId { get; set; }
         public string EnabledFlag { get; set; } = null!;
         public string AdminFlag { get; set; } = null!;
         public DateTime? InactiveDate { get; set; }
@@ -24,12 +24,12 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
         public string? CustomField3 { get; set; }
         public string? CustomField4 { get; set; }
         public string? CustomField5 { get; set; }
-        public decimal? CreatedBy { get; set; }
+        public int? CreatedBy { get; set; }
         public DateTime? CreationDate { get; set; }
-        public decimal? LastUpdatedBy { get; set; }
+        public int? LastUpdatedBy { get; set; }
         public DateTime? LastUpdateDate { get; set; }
-        public decimal? BranchId { get; set; }
-        public decimal? CustomerId { get; set; }
+        public int? BranchId { get; set; }
+        public int? CustomerId { get; set; }
         public string? CustomerIds { get; set; }
     }
 }

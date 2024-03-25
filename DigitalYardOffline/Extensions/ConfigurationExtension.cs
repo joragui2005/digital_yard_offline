@@ -8,7 +8,7 @@ namespace TipMexico.DigitalYard.WebAPI.Extensions
         private static string NameSectionCors = "AllowedHosts";
         internal static IServiceCollection AddModules(this IServiceCollection services, IConfiguration configuration)
         {
-            
+
             #region Cors
             var origins = configuration.GetSection(NameSectionCors).Value?.Split(";");
             services.AddCors(options =>
@@ -16,9 +16,7 @@ namespace TipMexico.DigitalYard.WebAPI.Extensions
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                                   builder =>
                                   {
-                                      builder.AllowAnyHeader()
-                                .AllowAnyMethod()
-                                .WithOrigins(origins);
+                                      builder.AllowAnyHeader().AllowAnyMethod().WithOrigins(origins);
                                   });
             });
             #endregion

@@ -5,7 +5,7 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
 {
     public partial class XxdyRebillStatus
     {
-        public decimal DetailId { get; set; }
+        public int DetailId { get; set; }
         public string SerialNumber { get; set; } = null!;
         public string? ItemCode { get; set; }
         public string? Vin { get; set; }
@@ -15,8 +15,8 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
         public string? CustomerName { get; set; }
         public string BranchName { get; set; } = null!;
         public DateTime? ReturnDate { get; set; }
-        public decimal RebillGroupId { get; set; }
-        public decimal? Amount { get; set; }
+        public int RebillGroupId { get; set; }
+        public int? Amount { get; set; }
         public string? DoorType { get; set; }
         public string? ContextValue { get; set; }
         public string? CustomField1 { get; set; }
@@ -26,9 +26,9 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
         public string? CustomField5 { get; set; }
         public string? DeleteFlag { get; set; }
         public DateTime? DeletedAt { get; set; }
-        public decimal? CreatedBy { get; set; }
+        public int? CreatedBy { get; set; }
         public DateTime? CreationDate { get; set; }
-        public decimal? LastUpdatedBy { get; set; }
+        public int? LastUpdatedBy { get; set; }
         public DateTime? LastUpdateDate { get; set; }
     }
 }

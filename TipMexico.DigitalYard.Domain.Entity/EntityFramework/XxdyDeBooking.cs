@@ -5,22 +5,22 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
 {
     public partial class XxdyDeBooking
     {
-        public decimal BookingId { get; set; }
+        public int BookingId { get; set; }
         public string? AssetNumber { get; set; }
-        public decimal CheckInId { get; set; }
+        public int CheckInId { get; set; }
         public DateTime CheckInDate { get; set; }
-        public decimal? PriorityId { get; set; }
-        public decimal? InsHeaderId { get; set; }
-        public decimal? IntHeaderId { get; set; }
-        public decimal? OtsHeaderId { get; set; }
-        public decimal? OttHeaderId { get; set; }
-        public decimal? QasHeaderId { get; set; }
-        public decimal? QatHeaderId { get; set; }
-        public decimal? RtsHeaderId { get; set; }
-        public decimal? RttHeaderId { get; set; }
-        public decimal? ReserveId { get; set; }
-        public decimal? DeliveryId { get; set; }
-        public decimal? CheckOutId { get; set; }
+        public int? PriorityId { get; set; }
+        public int? InsHeaderId { get; set; }
+        public int? IntHeaderId { get; set; }
+        public int? OtsHeaderId { get; set; }
+        public int? OttHeaderId { get; set; }
+        public int? QasHeaderId { get; set; }
+        public int? QatHeaderId { get; set; }
+        public int? RtsHeaderId { get; set; }
+        public int? RttHeaderId { get; set; }
+        public int? ReserveId { get; set; }
+        public int? DeliveryId { get; set; }
+        public int? CheckOutId { get; set; }
         public DateTime? CheckOutDate { get; set; }
         public string? BookStatus { get; set; }
         public DateTime? StatusDate { get; set; }
@@ -30,12 +30,12 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
         public string? CustomField3 { get; set; }
         public string? CustomField4 { get; set; }
         public string? CustomField5 { get; set; }
-        public decimal? CreatedBy { get; set; }
+        public int? CreatedBy { get; set; }
         public DateTime? CreationDate { get; set; }
-        public decimal? LastUpdatedBy { get; set; }
+        public int? LastUpdatedBy { get; set; }
         public DateTime? LastUpdateDate { get; set; }
-        public decimal? TCheckOutId { get; set; }
+        public int? TCheckOutId { get; set; }
         public DateTime? TCheckOutDate { get; set; }
-        public decimal? CurrentBranchId { get; set; }
+        public int? CurrentBranchId { get; set; }
     }
 }

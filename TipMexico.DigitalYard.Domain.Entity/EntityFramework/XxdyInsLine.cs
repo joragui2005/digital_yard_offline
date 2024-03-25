@@ -5,8 +5,8 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
 {
     public partial class XxdyInsLine
     {
-        public decimal LineId { get; set; }
-        public decimal HeaderId { get; set; }
+        public int LineId { get; set; }
+        public int HeaderId { get; set; }
         public string ZoneType { get; set; } = null!;
         public string? FrePlacaDeVin { get; set; }
         public string? FreNumeroOcultos { get; set; }
@@ -38,9 +38,9 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
         public string? CustomField3 { get; set; }
         public string? CustomField4 { get; set; }
         public string? CustomField5 { get; set; }
-        public decimal? CreatedBy { get; set; }
+        public int? CreatedBy { get; set; }
         public DateTime? CreationDate { get; set; }
-        public decimal? LastUpdatedBy { get; set; }
+        public int? LastUpdatedBy { get; set; }
         public DateTime? LastUpdateDate { get; set; }
         public string? PiObservacions { get; set; }
         public string? DocLuces { get; set; }

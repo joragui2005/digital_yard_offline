@@ -5,10 +5,10 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
 {
     public partial class XxdyDyProductivityLog
     {
-        public decimal LogId { get; set; }
-        public decimal PeriodId { get; set; }
-        public decimal? WeekNumber { get; set; }
-        public decimal? BranchId { get; set; }
+        public int LogId { get; set; }
+        public int PeriodId { get; set; }
+        public int? WeekNumber { get; set; }
+        public int? BranchId { get; set; }
         public string? Email { get; set; }
         public string? Subject { get; set; }
         public string? MessageContent { get; set; }
@@ -18,9 +18,9 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
         public string? CustomField3 { get; set; }
         public string? CustomField4 { get; set; }
         public string? CustomField5 { get; set; }
-        public decimal? CreatedBy { get; set; }
+        public int? CreatedBy { get; set; }
         public DateTime? CreationDate { get; set; }
-        public decimal? LastUpdatedBy { get; set; }
+        public int? LastUpdatedBy { get; set; }
         public DateTime? LastUpdateDate { get; set; }
     }
 }

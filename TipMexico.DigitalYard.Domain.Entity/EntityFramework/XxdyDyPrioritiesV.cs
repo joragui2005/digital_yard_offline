@@ -5,9 +5,9 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
 {
     public partial class XxdyDyPrioritiesV
     {
-        public decimal PriorityId { get; set; }
-        public decimal? DeHeaderId { get; set; }
-        public decimal? DeLineId { get; set; }
+        public int PriorityId { get; set; }
+        public int? DeHeaderId { get; set; }
+        public int? DeLineId { get; set; }
         public string TrxType { get; set; } = null!;
         public string LineType { get; set; } = null!;
         public string SerialNumber { get; set; } = null!;
@@ -18,7 +18,7 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
         public string? CustomerNumber { get; set; }
         public string? CustomerName { get; set; }
         public string? ItemCode { get; set; }
-        public decimal PriorityCode { get; set; }
+        public int PriorityCode { get; set; }
         public string? CustomField1 { get; set; }
         public DateTime? CreationDate { get; set; }
         public string? WorkshopName { get; set; }
@@ -33,14 +33,14 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
         public string? InsStatusT { get; set; }
         public string? OdtStatusS { get; set; }
         public string? OdtStatusT { get; set; }
-        public decimal? InsHeaderIdS { get; set; }
-        public decimal? InsHeaderIdT { get; set; }
-        public decimal? OdtHeaderIdS { get; set; }
-        public decimal? OdtHeaderIdT { get; set; }
-        public decimal? OdtTeamIdS { get; set; }
-        public decimal? OdtTeamIdT { get; set; }
-        public decimal? PlannedHours { get; set; }
-        public decimal? Amount { get; set; }
+        public int? InsHeaderIdS { get; set; }
+        public int? InsHeaderIdT { get; set; }
+        public int? OdtHeaderIdS { get; set; }
+        public int? OdtHeaderIdT { get; set; }
+        public int? OdtTeamIdS { get; set; }
+        public int? OdtTeamIdT { get; set; }
+        public int? PlannedHours { get; set; }
+        public int? Amount { get; set; }
         public string? ReserveStatus { get; set; }
         public string? ReserveCustomer { get; set; }
         public string? ReserveContract { get; set; }

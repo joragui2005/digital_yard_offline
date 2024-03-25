@@ -5,10 +5,10 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
 {
     public partial class XxdyInsLog
     {
-        public decimal LogId { get; set; }
-        public decimal InspectionId { get; set; }
-        public decimal InspectorId { get; set; }
-        public decimal? CreatedBy { get; set; }
+        public int LogId { get; set; }
+        public int InspectionId { get; set; }
+        public int InspectorId { get; set; }
+        public int? CreatedBy { get; set; }
         public DateTime? CreationDate { get; set; }
     }
 }

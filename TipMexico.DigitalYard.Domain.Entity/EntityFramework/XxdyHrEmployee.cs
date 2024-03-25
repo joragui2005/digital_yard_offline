@@ -5,7 +5,7 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
 {
     public partial class XxdyHrEmployee
     {
-        public decimal EmployeeId { get; set; }
+        public int EmployeeId { get; set; }
         public string? EmployeeNumber { get; set; }
         public string? EmployeeType { get; set; }
         public string? FirstName { get; set; }
@@ -19,8 +19,8 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public byte[]? ImageFile { get; set; }
-        public decimal DepartmentId { get; set; }
-        public decimal JobId { get; set; }
+        public int DepartmentId { get; set; }
+        public int JobId { get; set; }
         public string? MobilePhone { get; set; }
         public string? HomePhone { get; set; }
         public string? WorkPhone { get; set; }
@@ -31,10 +31,10 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
         public string? CustomField3 { get; set; }
         public string? CustomField4 { get; set; }
         public string? CustomField5 { get; set; }
-        public decimal OrgId { get; set; }
-        public decimal? CreatedBy { get; set; }
+        public int OrgId { get; set; }
+        public int? CreatedBy { get; set; }
         public DateTime? CreationDate { get; set; }
-        public decimal? LastUpdatedBy { get; set; }
+        public int? LastUpdatedBy { get; set; }
         public DateTime? LastUpdateDate { get; set; }
     }
 }

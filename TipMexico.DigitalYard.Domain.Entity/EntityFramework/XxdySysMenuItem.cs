@@ -5,11 +5,11 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
 {
     public partial class XxdySysMenuItem
     {
-        public decimal MenuItemId { get; set; }
-        public decimal MenuId { get; set; }
-        public decimal ModuleId { get; set; }
-        public decimal? PageId { get; set; }
-        public decimal ItemOrder { get; set; }
+        public int MenuItemId { get; set; }
+        public int MenuId { get; set; }
+        public int ModuleId { get; set; }
+        public int? PageId { get; set; }
+        public int ItemOrder { get; set; }
         public string EnabledFlag { get; set; } = null!;
         public string InsertAllowed { get; set; } = null!;
         public string UpdateAllowed { get; set; } = null!;
@@ -20,9 +20,9 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
         public string? CustomField3 { get; set; }
         public string? CustomField4 { get; set; }
         public string? CustomField5 { get; set; }
-        public decimal? CreatedBy { get; set; }
+        public int? CreatedBy { get; set; }
         public DateTime? CreationDate { get; set; }
-        public decimal? LastUpdatedBy { get; set; }
+        public int? LastUpdatedBy { get; set; }
         public DateTime? LastUpdateDate { get; set; }
     }
 }

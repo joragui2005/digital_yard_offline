@@ -117,7 +117,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("APP_FAILED_JOBS", "YARD");
 
                 entity.Property(e => e.Id)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .ValueGeneratedOnAdd()
                     .HasColumnName("ID");
 
@@ -154,20 +154,20 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.HasIndex(e => e.Queue, "APP_JOBS_IDX");
 
                 entity.Property(e => e.Id)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .ValueGeneratedOnAdd()
                     .HasColumnName("ID");
 
                 entity.Property(e => e.Attempts)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ATTEMPTS");
 
                 entity.Property(e => e.AvailableAt)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("AVAILABLE_AT");
 
                 entity.Property(e => e.CreatedAt)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_AT");
 
                 entity.Property(e => e.Payload)
@@ -181,7 +181,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("QUEUE");
 
                 entity.Property(e => e.ReservedAt)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("RESERVED_AT")
                     .HasDefaultValueSql("NULL");
             });
@@ -203,11 +203,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("UNIDAD_TIPO_DSC");
 
                 entity.Property(e => e.UnidadTipoId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("UNIDAD_TIPO_ID");
 
                 entity.Property(e => e.UnidadTipoOrgId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("UNIDAD_TIPO_ORG_ID");
             });
 
@@ -218,7 +218,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("CUSDY_DY_WO_DETAIL_T", "YARD");
 
                 entity.Property(e => e.Cantidad)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CANTIDAD");
 
                 entity.Property(e => e.CodigoActividad)
@@ -230,15 +230,15 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("CREATION_DATE");
 
                 entity.Property(e => e.CusdyDyWoHId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CUSDY_DY_WO_H_ID");
 
                 entity.Property(e => e.CusdyDyWoLId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CUSDY_DY_WO_L_ID");
 
                 entity.Property(e => e.DyappLineId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DYAPP_LINE_ID");
 
                 entity.Property(e => e.LastUpdateDate)
@@ -257,7 +257,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("CUSDY_DY_WO_HEADER_T", "YARD");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY");
 
                 entity.Property(e => e.CreationDate)
@@ -265,7 +265,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("CREATION_DATE");
 
                 entity.Property(e => e.CusdyDyWoHId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CUSDY_DY_WO_H_ID");
 
                 entity.Property(e => e.Detail)
@@ -273,7 +273,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("DETAIL");
 
                 entity.Property(e => e.DyappHeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DYAPP_HEADER_ID");
 
                 entity.Property(e => e.ItemTypeGeneric)
@@ -286,11 +286,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("LAST_UPDATE_DATE");
 
                 entity.Property(e => e.LastUpdateLogin)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATE_LOGIN");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY");
 
                 entity.Property(e => e.NumUnidad)
@@ -319,7 +319,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("UNIT_GENERIC");
 
                 entity.Property(e => e.WipEntityId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("WIP_ENTITY_ID");
 
                 entity.Property(e => e.WoNumber)
@@ -341,7 +341,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_AM_THEFT1_REPORT", "YARD");
 
                 entity.Property(e => e.ReportId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("REPORT_ID");
 
                 entity.Property(e => e.Clase)
@@ -357,7 +357,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("'1'");
 
@@ -460,7 +460,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("'1'");
 
@@ -521,7 +521,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_AM_THEFT_REPORT", "YARD");
 
                 entity.Property(e => e.ReportId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("REPORT_ID");
 
                 entity.Property(e => e.AssetNumber)
@@ -536,7 +536,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -591,7 +591,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -618,7 +618,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_AM_THEFT_REPORT_H", "YARD");
 
                 entity.Property(e => e.HistoryId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("HISTORY_ID");
 
                 entity.Property(e => e.AssetNumber)
@@ -633,7 +633,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -688,12 +688,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
                 entity.Property(e => e.ReportId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("REPORT_ID");
 
                 entity.Property(e => e.ReportPlate)
@@ -719,7 +719,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_AM_VERIFICATIONS", "YARD");
 
                 entity.Property(e => e.VerifyId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("VERIFY_ID");
 
                 entity.Property(e => e.AssetClass)
@@ -743,7 +743,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("ASSET_TYPE");
 
                 entity.Property(e => e.BranchId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("BRANCH_ID");
 
                 entity.Property(e => e.BrandName)
@@ -773,7 +773,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -838,7 +838,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -912,7 +912,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_AM_VERIFICATIONS1", "YARD");
 
                 entity.Property(e => e.VerifyId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("VERIFY_ID");
 
                 entity.Property(e => e.AssetClass)
@@ -940,7 +940,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.BranchId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("BRANCH_ID")
                     .HasDefaultValueSql("NULL");
 
@@ -975,7 +975,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("'1'");
 
@@ -1060,7 +1060,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("'1'");
 
@@ -1147,7 +1147,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_AM_VERIFICATIONS_H", "YARD");
 
                 entity.Property(e => e.HistoryId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("HISTORY_ID");
 
                 entity.Property(e => e.AssetClass)
@@ -1171,7 +1171,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("ASSET_TYPE");
 
                 entity.Property(e => e.BranchId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("BRANCH_ID");
 
                 entity.Property(e => e.BrandName)
@@ -1201,7 +1201,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -1266,7 +1266,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -1327,7 +1327,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("VERIFY_FOLIO_OLD");
 
                 entity.Property(e => e.VerifyId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("VERIFY_ID");
 
                 entity.Property(e => e.Vin)
@@ -1346,7 +1346,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.HasIndex(e => new { e.DocumentSetId, e.DocumentId }, "XXDY_APP_ASSIGNED_DOCS_IDX");
 
                 entity.Property(e => e.AssignmentId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ASSIGNMENT_ID");
 
                 entity.Property(e => e.ContextValue)
@@ -1356,7 +1356,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -1396,15 +1396,15 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.DisplayOrder)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DISPLAY_ORDER");
 
                 entity.Property(e => e.DocumentId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DOCUMENT_ID");
 
                 entity.Property(e => e.DocumentSetId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DOCUMENT_SET_ID");
 
                 entity.Property(e => e.LastUpdateDate)
@@ -1413,12 +1413,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
                 entity.Property(e => e.OrgId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ORG_ID")
                     .HasDefaultValueSql("NULL");
 
@@ -1445,7 +1445,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.HasIndex(e => e.DocumentCode, "XXDY_APP_DOCUMENTS_IDX");
 
                 entity.Property(e => e.DocumentId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DOCUMENT_ID");
 
                 entity.Property(e => e.ApproverId)
@@ -1455,7 +1455,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.AttachmentId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ATTACHMENT_ID")
                     .HasDefaultValueSql("NULL");
 
@@ -1466,7 +1466,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -1543,12 +1543,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
                 entity.Property(e => e.NoOfCopies)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("NO_OF_COPIES")
                     .HasDefaultValueSql("1 ");
 
@@ -1573,7 +1573,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_APP_DOCUMENT_SETS", "YARD");
 
                 entity.Property(e => e.DocumentSetId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DOCUMENT_SET_ID");
 
                 entity.Property(e => e.ContextValue)
@@ -1583,7 +1583,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -1645,12 +1645,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
                 entity.Property(e => e.OrgId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ORG_ID")
                     .HasDefaultValueSql("NULL");
 
@@ -1670,7 +1670,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.HasIndex(e => new { e.DocumentId, e.ReasonCode }, "XXDY_APP_REJECTED_REASONS_IDX");
 
                 entity.Property(e => e.ReasonId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("REASON_ID");
 
                 entity.Property(e => e.ContextValue)
@@ -1680,7 +1680,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -1726,11 +1726,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.DisplayOrder)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DISPLAY_ORDER");
 
                 entity.Property(e => e.DocumentId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DOCUMENT_ID");
 
                 entity.Property(e => e.EnabledFlag)
@@ -1745,7 +1745,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -1763,7 +1763,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToView("XXDY_CAT_CUSTOMERS_V", "YARD");
 
                 entity.Property(e => e.CustomerId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CUSTOMER_ID");
 
                 entity.Property(e => e.CustomerName)
@@ -1795,7 +1795,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("CATEGORY_NAME");
 
                 entity.Property(e => e.ContractId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CONTRACT_ID");
 
                 entity.Property(e => e.ContractNumber)
@@ -1804,7 +1804,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("CONTRACT_NUMBER");
 
                 entity.Property(e => e.ContractOrgId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CONTRACT_ORG_ID");
 
                 entity.Property(e => e.ContractStatus)
@@ -1818,7 +1818,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.CustomerId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CUSTOMER_ID");
 
                 entity.Property(e => e.CustomerName)
@@ -1898,7 +1898,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .IsUnique();
 
                 entity.Property(e => e.SubstituteId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("SUBSTITUTE_ID");
 
                 entity.Property(e => e.ContextValue)
@@ -1908,7 +1908,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -1968,12 +1968,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
                 entity.Property(e => e.OriginalItemId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ORIGINAL_ITEM_ID");
 
                 entity.Property(e => e.SubstituteDesc)
@@ -1982,7 +1982,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("SUBSTITUTE_DESC");
 
                 entity.Property(e => e.SubstituteItemId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("SUBSTITUTE_ITEM_ID");
             });
 
@@ -1998,7 +1998,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("CATEGORY_NAME");
 
                 entity.Property(e => e.ContractId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CONTRACT_ID");
 
                 entity.Property(e => e.ContractNumber)
@@ -2007,7 +2007,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("CONTRACT_NUMBER");
 
                 entity.Property(e => e.ContractOrgId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CONTRACT_ORG_ID");
 
                 entity.Property(e => e.ContractStatus)
@@ -2021,7 +2021,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.CustomerId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CUSTOMER_ID");
 
                 entity.Property(e => e.CustomerName)
@@ -2103,7 +2103,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_CAT_LICENSES", "YARD");
 
                 entity.Property(e => e.LicenseId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LICENSE_ID");
 
                 entity.Property(e => e.ContextValue)
@@ -2113,7 +2113,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -2176,7 +2176,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -2207,11 +2207,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_CAT_MATERIALS", "YARD");
 
                 entity.Property(e => e.AssemblyItemId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ASSEMBLY_ITEM_ID");
 
                 entity.Property(e => e.Amount)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("AMOUNT");
 
                 entity.Property(e => e.CreationDate)
@@ -2240,7 +2240,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("MISCELLANEOUS");
 
                 entity.Property(e => e.OrganizationId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ORGANIZATION_ID");
 
                 entity.Property(e => e.UomCode)
@@ -2273,11 +2273,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("ACTIVITY_NAME");
 
                 entity.Property(e => e.AssemblyItemId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ASSEMBLY_ITEM_ID");
 
                 entity.Property(e => e.ComponentQuantity)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("COMPONENT_QUANTITY");
 
                 entity.Property(e => e.CreationDate)
@@ -2296,7 +2296,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("ITEM_DESCRIPTION");
 
                 entity.Property(e => e.ItemSequence)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ITEM_SEQUENCE");
 
                 entity.Property(e => e.LastUpdateDate)
@@ -2305,11 +2305,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE\n");
 
                 entity.Property(e => e.OperationSeqNum)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("OPERATION_SEQ_NUM");
 
                 entity.Property(e => e.OrganizationId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ORGANIZATION_ID");
 
                 entity.Property(e => e.PrimaryUomCode)
@@ -2332,7 +2332,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .IsUnique();
 
                 entity.Property(e => e.MiscellaneousId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("MISCELLANEOUS_ID");
 
                 entity.Property(e => e.ContextValue)
@@ -2342,7 +2342,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -2392,7 +2392,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("ITEM_DESCRIPTION");
 
                 entity.Property(e => e.ItemId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ITEM_ID");
 
                 entity.Property(e => e.LastUpdateDate)
@@ -2401,7 +2401,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
             });
@@ -2414,7 +2414,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_CAT_TYRES", "YARD");
 
                 entity.Property(e => e.LineId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LINE_ID");
 
                 entity.Property(e => e.Comments)
@@ -2436,7 +2436,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -2493,7 +2493,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -2548,7 +2548,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_CAT_ZONES", "YARD");
 
                 entity.Property(e => e.ZoneId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ZONE_ID");
 
                 entity.Property(e => e.ContextValue)
@@ -2558,7 +2558,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -2608,7 +2608,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -2656,7 +2656,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("ACTIVITY_CODE");
 
                 entity.Property(e => e.AssemblyItemId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ASSEMBLY_ITEM_ID");
 
                 entity.Property(e => e.ContextValue)
@@ -2666,7 +2666,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -2721,7 +2721,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE\n");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -2736,7 +2736,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("ZONE_AREA");
 
                 entity.Property(e => e.ZoneId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ZONE_ID");
 
                 entity.Property(e => e.ZoneType)
@@ -2767,7 +2767,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("ACTIVITY_CODE");
 
                 entity.Property(e => e.AssemblyItemId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ASSEMBLY_ITEM_ID");
 
                 entity.Property(e => e.ContextValue)
@@ -2776,7 +2776,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("CONTEXT_VALUE");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY");
 
                 entity.Property(e => e.CreationDate)
@@ -2823,7 +2823,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("LAST_UPDATE_DATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY");
 
                 entity.Property(e => e.Zona)
@@ -2837,7 +2837,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("ZONE_AREA");
 
                 entity.Property(e => e.ZoneId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ZONE_ID");
 
                 entity.Property(e => e.ZoneType)
@@ -2859,11 +2859,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_CAT_ZONE_MATERIALS", "YARD");
 
                 entity.Property(e => e.DetailId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DETAIL_ID");
 
                 entity.Property(e => e.AssemblyItemId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ASSEMBLY_ITEM_ID");
 
                 entity.Property(e => e.ContextValue)
@@ -2873,7 +2873,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -2918,12 +2918,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
                 entity.Property(e => e.ZoneId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ZONE_ID");
             });
 
@@ -2946,7 +2946,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -2996,7 +2996,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
             });
@@ -3009,7 +3009,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_CONFIRM_LINES", "YARD");
 
                 entity.Property(e => e.DeLineId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DE_LINE_ID");
 
                 entity.Property(e => e.ApiErrorLoc)
@@ -3059,7 +3059,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_CUSTOMER_CONTRACTS_V", "YARD");
 
                 entity.Property(e => e.ContractId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CONTRACT_ID");
 
                 entity.Property(e => e.ContractKnownas)
@@ -3073,7 +3073,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("CONTRACT_NUMBER");
 
                 entity.Property(e => e.CustomerId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CUSTOMER_ID");
 
                 entity.Property(e => e.CustomerName)
@@ -3095,7 +3095,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_DA_ATTACHMENTS", "YARD");
 
                 entity.Property(e => e.FileId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("FILE_ID");
 
                 entity.Property(e => e.AbsoluteName)
@@ -3111,7 +3111,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("'NEW'");
 
                 entity.Property(e => e.ApprovedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("APPROVED_BY")
                     .HasDefaultValueSql("NULL");
 
@@ -3128,7 +3128,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -3191,12 +3191,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE\n");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
                 entity.Property(e => e.OrgId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ORG_ID");
 
                 entity.Property(e => e.RejectMotive)
@@ -3217,7 +3217,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("SOURCE_FOLDER");
 
                 entity.Property(e => e.SourceId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("SOURCE_ID");
 
                 entity.Property(e => e.SourceTable)
@@ -3239,7 +3239,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_DA_DOCUMENTS", "YARD");
 
                 entity.Property(e => e.DaDocumentId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DA_DOCUMENT_ID");
 
                 entity.Property(e => e.Comments)
@@ -3255,7 +3255,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -3295,16 +3295,16 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.DepartmentId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DEPARTMENT_ID")
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.DocumentId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DOCUMENT_ID");
 
                 entity.Property(e => e.DocumentSetId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DOCUMENT_SET_ID")
                     .HasDefaultValueSql("NULL");
 
@@ -3320,12 +3320,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE\n");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
                 entity.Property(e => e.OrgId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ORG_ID");
 
                 entity.Property(e => e.OriginalDoc)
@@ -3368,7 +3368,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("APPROVER_ID");
 
                 entity.Property(e => e.DaDocumentId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DA_DOCUMENT_ID");
 
                 entity.Property(e => e.DispFlag)
@@ -3388,7 +3388,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("DOCUMENT_DESC");
 
                 entity.Property(e => e.DocumentId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DOCUMENT_ID");
 
                 entity.Property(e => e.DocumentName)
@@ -3397,7 +3397,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("DOCUMENT_NAME");
 
                 entity.Property(e => e.DocumentSetId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DOCUMENT_SET_ID");
 
                 entity.Property(e => e.DocumentSetName)
@@ -3431,7 +3431,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("SOURCE_TABLE");
 
                 entity.Property(e => e.TotalFiles)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("TOTAL_FILES");
             });
 
@@ -3443,7 +3443,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_DA_LOGS", "YARD");
 
                 entity.Property(e => e.LogId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LOG_ID");
 
                 entity.Property(e => e.Comments)
@@ -3459,7 +3459,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -3499,12 +3499,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.DaDocumentId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DA_DOCUMENT_ID")
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.DepartmentId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DEPARTMENT_ID")
                     .HasDefaultValueSql("NULL");
 
@@ -3514,7 +3514,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE\n");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -3543,7 +3543,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_DA_TRANSACTIONS", "YARD");
 
                 entity.Property(e => e.TrxId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("TRX_ID");
 
                 entity.Property(e => e.ApprovalComments)
@@ -3576,7 +3576,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -3616,15 +3616,15 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.DaDocumentId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DA_DOCUMENT_ID");
 
                 entity.Property(e => e.DepartmentId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DEPARTMENT_ID");
 
                 entity.Property(e => e.EmployeeId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("EMPLOYEE_ID");
 
                 entity.Property(e => e.LastUpdateDate)
@@ -3633,7 +3633,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE\n");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -3649,7 +3649,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("'N' ");
 
                 entity.Property(e => e.OrgId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ORG_ID");
 
                 entity.Property(e => e.ReturnComments)
@@ -3668,7 +3668,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("TRX_DATE");
 
                 entity.Property(e => e.TrxDays)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("TRX_DAYS")
                     .HasDefaultValueSql("0");
 
@@ -3686,7 +3686,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_DE_ACTIVATIONS", "YARD");
 
                 entity.Property(e => e.ActivationId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ACTIVATION_ID");
 
                 entity.Property(e => e.ActivateFlag)
@@ -3701,7 +3701,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.BranchId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("BRANCH_ID")
                     .HasDefaultValueSql("1 ");
 
@@ -3717,7 +3717,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("CONTRACT_NUMBER");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -3757,7 +3757,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CustomerId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CUSTOMER_ID");
 
                 entity.Property(e => e.CustomerName)
@@ -3771,7 +3771,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("DEAL_TYPE");
 
                 entity.Property(e => e.DeliveryId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DELIVERY_ID");
 
                 entity.Property(e => e.LastUpdateDate)
@@ -3780,7 +3780,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -3833,7 +3833,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.HasIndex(e => e.HeaderId, "XXDY_DE_ATTACHMENTS_IDX");
 
                 entity.Property(e => e.AttachId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ATTACH_ID");
 
                 entity.Property(e => e.AttachType)
@@ -3848,7 +3848,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -3893,7 +3893,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("FILE_PATH");
 
                 entity.Property(e => e.HeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("HEADER_ID");
 
                 entity.Property(e => e.LastUpdateDate)
@@ -3902,12 +3902,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
                 entity.Property(e => e.LineId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LINE_ID");
             });
 
@@ -3922,7 +3922,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .IsUnique();
 
                 entity.Property(e => e.BookingId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("BOOKING_ID");
 
                 entity.Property(e => e.AssetNumber)
@@ -3941,7 +3941,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("CHECK_IN_DATE");
 
                 entity.Property(e => e.CheckInId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CHECK_IN_ID");
 
                 entity.Property(e => e.CheckOutDate)
@@ -3950,7 +3950,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CheckOutId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CHECK_OUT_ID")
                     .HasDefaultValueSql("NULL ");
 
@@ -3961,7 +3961,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -3971,7 +3971,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.CurrentBranchId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CURRENT_BRANCH_ID")
                     .HasDefaultValueSql("NULL");
 
@@ -4006,17 +4006,17 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.DeliveryId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DELIVERY_ID")
                     .HasDefaultValueSql("NULL ");
 
                 entity.Property(e => e.InsHeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("INS_HEADER_ID")
                     .HasDefaultValueSql("NULL ");
 
                 entity.Property(e => e.IntHeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("INT_HEADER_ID")
                     .HasDefaultValueSql("NULL ");
 
@@ -4026,47 +4026,47 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
                 entity.Property(e => e.OtsHeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("OTS_HEADER_ID")
                     .HasDefaultValueSql("NULL ");
 
                 entity.Property(e => e.OttHeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("OTT_HEADER_ID")
                     .HasDefaultValueSql("NULL ");
 
                 entity.Property(e => e.PriorityId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PRIORITY_ID")
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.QasHeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("QAS_HEADER_ID")
                     .HasDefaultValueSql("NULL ");
 
                 entity.Property(e => e.QatHeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("QAT_HEADER_ID")
                     .HasDefaultValueSql("NULL ");
 
                 entity.Property(e => e.ReserveId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("RESERVE_ID")
                     .HasDefaultValueSql("NULL ");
 
                 entity.Property(e => e.RtsHeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("RTS_HEADER_ID")
                     .HasDefaultValueSql("NULL ");
 
                 entity.Property(e => e.RttHeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("RTT_HEADER_ID")
                     .HasDefaultValueSql("NULL ");
 
@@ -4081,7 +4081,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL\n");
 
                 entity.Property(e => e.TCheckOutId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("T_CHECK_OUT_ID")
                     .HasDefaultValueSql("NULL ");
             });
@@ -4094,16 +4094,16 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_DE_DELIVERIES", "YARD");
 
                 entity.Property(e => e.DeliveryId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DELIVERY_ID");
 
                 entity.Property(e => e.ActivationId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ACTIVATION_ID")
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.BranchId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("BRANCH_ID")
                     .HasDefaultValueSql("1 ");
 
@@ -4136,7 +4136,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("CONTRACT_NUMBER");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -4176,7 +4176,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CustomerId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CUSTOMER_ID");
 
                 entity.Property(e => e.DeliveryDate)
@@ -4197,7 +4197,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("'N' ");
 
                 entity.Property(e => e.HiHeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("HI_HEADER_ID")
                     .HasDefaultValueSql("NULL");
 
@@ -4208,12 +4208,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("'N' ");
 
                 entity.Property(e => e.HillHeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("HILL_HEADER_ID")
                     .HasDefaultValueSql("NULL\n");
 
                 entity.Property(e => e.IdSlot)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ID_SLOT")
                     .HasDefaultValueSql("NULL");
 
@@ -4223,7 +4223,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -4234,7 +4234,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("'N' ");
 
                 entity.Property(e => e.LicenseId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LICENSE_ID")
                     .HasDefaultValueSql("NULL");
 
@@ -4286,11 +4286,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_DE_HEADERS", "YARD");
 
                 entity.Property(e => e.HeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("HEADER_ID");
 
                 entity.Property(e => e.BranchId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("BRANCH_ID")
                     .HasDefaultValueSql("1 ");
 
@@ -4307,7 +4307,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -4358,7 +4358,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -4393,7 +4393,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_DE_LINES", "YARD");
 
                 entity.Property(e => e.LineId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LINE_ID");
 
                 entity.Property(e => e.AssetNumber)
@@ -4403,7 +4403,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL\n");
 
                 entity.Property(e => e.CancelBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CANCEL_BY")
                     .HasDefaultValueSql("NULL");
 
@@ -4419,7 +4419,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL\r\n  ");
 
                 entity.Property(e => e.ConfirmBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CONFIRM_BY")
                     .HasDefaultValueSql("NULL");
 
@@ -4445,7 +4445,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("CONTRACT_STATUS");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -4495,7 +4495,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("CUSTOMER_NUMBER");
 
                 entity.Property(e => e.DeliveryId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DELIVERY_ID")
                     .HasDefaultValueSql("NULL");
 
@@ -4505,7 +4505,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("DOOR_TYPE");
 
                 entity.Property(e => e.HeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("HEADER_ID");
 
                 entity.Property(e => e.ItemCode)
@@ -4525,17 +4525,17 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
                 entity.Property(e => e.LineBranchId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LINE_BRANCH_ID")
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.LineNumber)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LINE_NUMBER");
 
                 entity.Property(e => e.LineStatus)
@@ -4594,7 +4594,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .IsUnique();
 
                 entity.Property(e => e.PassId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PASS_ID");
 
                 entity.Property(e => e.AssetNumber)
@@ -4603,16 +4603,16 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("ASSET_NUMBER");
 
                 entity.Property(e => e.BookingId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("BOOKING_ID");
 
                 entity.Property(e => e.CheckInId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CHECK_IN_ID")
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CheckOutId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CHECK_OUT_ID");
 
                 entity.Property(e => e.ContextValue)
@@ -4622,7 +4622,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -4667,7 +4667,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
             });
@@ -4680,7 +4680,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_DE_RESERVATIONS", "YARD");
 
                 entity.Property(e => e.ReserveId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("RESERVE_ID");
 
                 entity.Property(e => e.ActContractNumber)
@@ -4689,7 +4689,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("ACT_CONTRACT_NUMBER");
 
                 entity.Property(e => e.ActCustomerId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ACT_CUSTOMER_ID");
 
                 entity.Property(e => e.ActCustomerName)
@@ -4698,12 +4698,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("ACT_CUSTOMER_NAME");
 
                 entity.Property(e => e.BranchId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("BRANCH_ID")
                     .HasDefaultValueSql("1 ");
 
                 entity.Property(e => e.CheckInId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CHECK_IN_ID");
 
                 entity.Property(e => e.Comments)
@@ -4724,7 +4724,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("CONTRACT_NUMBER");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -4764,7 +4764,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CustomerId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CUSTOMER_ID");
 
                 entity.Property(e => e.CustomerName)
@@ -4778,12 +4778,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("DEAL_TYPE");
 
                 entity.Property(e => e.DeliveryId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DELIVERY_ID")
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.IdSlot)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ID_SLOT")
                     .HasDefaultValueSql("NULL");
 
@@ -4793,7 +4793,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -4873,7 +4873,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_DY_AVAILABILITY", "YARD");
 
                 entity.Property(e => e.LineId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LINE_ID");
 
                 entity.Property(e => e.ActivationDate)
@@ -4943,7 +4943,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -5065,7 +5065,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -5178,7 +5178,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.RowNumber)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ROW_NUMBER");
 
                 entity.Property(e => e.SalesRep)
@@ -5342,11 +5342,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("FOLIO_E_1");
 
                 entity.Property(e => e.FolioE2)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("FOLIO_E_2");
 
                 entity.Property(e => e.FolioE3)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("FOLIO_E_3");
 
                 entity.Property(e => e.FolioS1)
@@ -5356,11 +5356,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .IsFixedLength();
 
                 entity.Property(e => e.FolioS2)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("FOLIO_S_2");
 
                 entity.Property(e => e.FolioS3)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("FOLIO_S_3");
 
                 entity.Property(e => e.Modelo)
@@ -5389,7 +5389,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("PLACA");
 
                 entity.Property(e => e.Prioridad)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PRIORIDAD");
 
                 entity.Property(e => e.TipoOperacionE)
@@ -5431,7 +5431,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_DY_DELIVERED", "YARD");
 
                 entity.Property(e => e.LineId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LINE_ID");
 
                 entity.Property(e => e.ActivationDate)
@@ -5507,7 +5507,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -5623,7 +5623,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -5736,7 +5736,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.RowNumber)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ROW_NUMBER");
 
                 entity.Property(e => e.SalesRep)
@@ -5814,7 +5814,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_DY_DELIVERED_FLOTA", "YARD");
 
                 entity.Property(e => e.LineId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LINE_ID");
 
                 entity.Property(e => e.ArriveDate)
@@ -5852,7 +5852,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -5955,7 +5955,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE\n");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -6033,7 +6033,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToView("XXDY_DY_PRIORITIES_V", "YARD");
 
                 entity.Property(e => e.Amount)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("AMOUNT");
 
                 entity.Property(e => e.BranchName)
@@ -6076,19 +6076,19 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("CUSTOMER_NUMBER");
 
                 entity.Property(e => e.DeHeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DE_HEADER_ID");
 
                 entity.Property(e => e.DeLineId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DE_LINE_ID");
 
                 entity.Property(e => e.InsHeaderIdS)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("INS_HEADER_ID_S");
 
                 entity.Property(e => e.InsHeaderIdT)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("INS_HEADER_ID_T");
 
                 entity.Property(e => e.InsStatusS)
@@ -6132,11 +6132,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("ODT_FLAG");
 
                 entity.Property(e => e.OdtHeaderIdS)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ODT_HEADER_ID_S");
 
                 entity.Property(e => e.OdtHeaderIdT)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ODT_HEADER_ID_T");
 
                 entity.Property(e => e.OdtStatusS)
@@ -6150,15 +6150,15 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("ODT_STATUS_T");
 
                 entity.Property(e => e.OdtTeamIdS)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ODT_TEAM_ID_S");
 
                 entity.Property(e => e.OdtTeamIdT)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ODT_TEAM_ID_T");
 
                 entity.Property(e => e.PlannedHours)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PLANNED_HOURS");
 
                 entity.Property(e => e.PlateNumber)
@@ -6167,11 +6167,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("PLATE_NUMBER");
 
                 entity.Property(e => e.PriorityCode)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PRIORITY_CODE");
 
                 entity.Property(e => e.PriorityId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PRIORITY_ID");
 
                 entity.Property(e => e.RebillFlag)
@@ -6230,11 +6230,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.HasIndex(e => e.DeLineId, "XXDY_DY_PRIORITIES_IDX");
 
                 entity.Property(e => e.PriorityId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PRIORITY_ID");
 
                 entity.Property(e => e.BranchId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("BRANCH_ID");
 
                 entity.Property(e => e.Comments)
@@ -6260,7 +6260,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("CONTRACT_STATUS");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -6310,12 +6310,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("CUSTOMER_NUMBER");
 
                 entity.Property(e => e.DeHeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DE_HEADER_ID")
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.DeLineId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DE_LINE_ID")
                     .HasDefaultValueSql("NULL");
 
@@ -6336,12 +6336,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
                 entity.Property(e => e.LineBranchId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LINE_BRANCH_ID")
                     .HasDefaultValueSql("NULL");
 
@@ -6368,7 +6368,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("PLATE_NUMBER");
 
                 entity.Property(e => e.PriorityCode)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PRIORITY_CODE")
                     .HasDefaultValueSql("99 ");
 
@@ -6409,7 +6409,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_DY_PRODUCTIVITY", "YARD");
 
                 entity.Property(e => e.ProductivityId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PRODUCTIVITY_ID");
 
                 entity.Property(e => e.AusenciaComment)
@@ -6419,7 +6419,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL\n");
 
                 entity.Property(e => e.BranchId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("BRANCH_ID");
 
                 entity.Property(e => e.ContextValue)
@@ -6429,7 +6429,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("'1'");
 
@@ -6469,12 +6469,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.DLaborados)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("D_LABORADOS")
                     .HasDefaultValueSql("5");
 
                 entity.Property(e => e.DNomina)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("D_NOMINA")
                     .HasDefaultValueSql("5");
 
@@ -6508,64 +6508,64 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("'1'");
 
                 entity.Property(e => e.ODays)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("O_DAYS")
                     .HasDefaultValueSql("0");
 
                 entity.Property(e => e.PdtyPercent)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PDTY_PERCENT")
                     .HasDefaultValueSql("0");
 
                 entity.Property(e => e.PeriodId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PERIOD_ID");
 
                 entity.Property(e => e.PersonId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PERSON_ID");
 
                 entity.Property(e => e.TAusencia)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("T_AUSENCIA")
                     .HasDefaultValueSql("0");
 
                 entity.Property(e => e.TExtra)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("T_EXTRA")
                     .HasDefaultValueSql("0");
 
                 entity.Property(e => e.TIncapacidad)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("T_INCAPACIDAD")
                     .HasDefaultValueSql("0");
 
                 entity.Property(e => e.TIndirecto)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("T_INDIRECTO")
                     .HasDefaultValueSql("0");
 
                 entity.Property(e => e.TOdt)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("T_ODT")
                     .HasDefaultValueSql("0");
 
                 entity.Property(e => e.TVacaciones)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("T_VACACIONES")
                     .HasDefaultValueSql("0");
 
                 entity.Property(e => e.TeamHeadId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("TEAM_HEAD_ID");
 
                 entity.Property(e => e.TeamId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("TEAM_ID");
 
                 entity.Property(e => e.VacacionesComment)
@@ -6575,7 +6575,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL\n");
 
                 entity.Property(e => e.WByPeriod)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("W_BY_PERIOD")
                     .HasDefaultValueSql("NULL");
 
@@ -6592,7 +6592,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.WeekNumber)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("WEEK_NUMBER");
 
                 entity.Property(e => e.WeekStatus)
@@ -6610,11 +6610,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_DY_PRODUCTIVITY_LOGS", "YARD");
 
                 entity.Property(e => e.LogId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LOG_ID");
 
                 entity.Property(e => e.BranchId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("BRANCH_ID")
                     .HasDefaultValueSql("NULL");
 
@@ -6625,7 +6625,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -6676,7 +6676,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -6687,7 +6687,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.PeriodId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PERIOD_ID");
 
                 entity.Property(e => e.Subject)
@@ -6697,7 +6697,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.WeekNumber)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("WEEK_NUMBER")
                     .HasDefaultValueSql("NULL");
             });
@@ -6713,11 +6713,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .IsUnique();
 
                 entity.Property(e => e.TeamId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("TEAM_ID");
 
                 entity.Property(e => e.BranchId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("BRANCH_ID")
                     .HasDefaultValueSql("NULL");
 
@@ -6728,7 +6728,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -6778,7 +6778,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -6789,7 +6789,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.TeamHead)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("TEAM_HEAD");
 
                 entity.Property(e => e.TeamName)
@@ -6814,7 +6814,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .IsUnique();
 
                 entity.Property(e => e.LineId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LINE_ID");
 
                 entity.Property(e => e.ContextValue)
@@ -6824,7 +6824,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -6864,17 +6864,17 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.DLaborados)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("D_LABORADOS")
                     .HasDefaultValueSql("5");
 
                 entity.Property(e => e.DNomina)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("D_NOMINA")
                     .HasDefaultValueSql("5");
 
                 entity.Property(e => e.HNomina)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("H_NOMINA")
                     .HasDefaultValueSql("45");
 
@@ -6884,16 +6884,16 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
                 entity.Property(e => e.PersonId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PERSON_ID");
 
                 entity.Property(e => e.TeamId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("TEAM_ID")
                     .HasDefaultValueSql("NULL");
             });
@@ -6927,7 +6927,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.HasIndex(e => new { e.DepartmentName, e.OrgId }, "XXDY_HR_DEPARTMENTS_IDX2");
 
                 entity.Property(e => e.DepartmentId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DEPARTMENT_ID");
 
                 entity.Property(e => e.ContextValue)
@@ -6937,7 +6937,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -7010,17 +7010,17 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
                 entity.Property(e => e.OrgId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ORG_ID")
                     .HasDefaultValueSql("1 ");
 
                 entity.Property(e => e.ParentDeptId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PARENT_DEPT_ID")
                     .HasDefaultValueSql("NULL");
             });
@@ -7035,7 +7035,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.HasIndex(e => new { e.EmployeeNumber, e.OrgId }, "XXDY_HR_EMPLOYEES_IDX1");
 
                 entity.Property(e => e.EmployeeId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("EMPLOYEE_ID");
 
                 entity.Property(e => e.ContextValue)
@@ -7045,7 +7045,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -7085,7 +7085,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.DepartmentId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DEPARTMENT_ID");
 
                 entity.Property(e => e.Email)
@@ -7146,7 +7146,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.JobId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("JOB_ID");
 
                 entity.Property(e => e.LastName)
@@ -7161,7 +7161,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -7184,7 +7184,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.OrgId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ORG_ID")
                     .HasDefaultValueSql("1 ");
 
@@ -7218,11 +7218,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.HasIndex(e => new { e.JobName, e.OrgId }, "XXDY_HR_JOBS_IDX2");
 
                 entity.Property(e => e.JobId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("JOB_ID");
 
                 entity.Property(e => e.BranchId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("BRANCH_ID")
                     .HasDefaultValueSql("NULL");
 
@@ -7233,7 +7233,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -7299,17 +7299,17 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
                 entity.Property(e => e.OrgId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ORG_ID")
                     .HasDefaultValueSql("1 ");
 
                 entity.Property(e => e.ParentId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PARENT_ID")
                     .HasDefaultValueSql("NULL");
             });
@@ -7322,7 +7322,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_INS_ATTACHMENTS", "YARD");
 
                 entity.Property(e => e.FileId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("FILE_ID");
 
                 entity.Property(e => e.AbsoluteName)
@@ -7338,7 +7338,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("'NEW'");
 
                 entity.Property(e => e.ApprovedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("APPROVED_BY")
                     .HasDefaultValueSql("NULL");
 
@@ -7355,7 +7355,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -7395,7 +7395,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.DanoOrder)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DANO_ORDER")
                     .HasDefaultValueSql("NULL ");
 
@@ -7406,7 +7406,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.DetailId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DETAIL_ID")
                     .HasDefaultValueSql("NULL\r\n  ");
 
@@ -7429,7 +7429,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.HeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("HEADER_ID");
 
                 entity.Property(e => e.LastUpdateDate)
@@ -7438,16 +7438,16 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE\n");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
                 entity.Property(e => e.LineId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LINE_ID");
 
                 entity.Property(e => e.OrgId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ORG_ID");
 
                 entity.Property(e => e.RejectMotive)
@@ -7496,12 +7496,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("HEADER_ID");
 
                 entity.Property(e => e.ActualInspector)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ACTUAL_INSPECTOR")
                     .HasDefaultValueSql("NULL ");
 
                 entity.Property(e => e.BranchId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("BRANCH_ID")
                     .HasDefaultValueSql("1 ");
 
@@ -7523,7 +7523,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("CONTRACT_NUMBER");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -7568,12 +7568,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("CUSTOMER_NAME");
 
                 entity.Property(e => e.DeHeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DE_HEADER_ID")
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.DeLineId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DE_LINE_ID")
                     .HasDefaultValueSql("NULL");
 
@@ -7621,7 +7621,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -7700,7 +7700,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_INS_LINES", "YARD");
 
                 entity.Property(e => e.LineId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LINE_ID");
 
                 entity.Property(e => e.CdNumeroOcultos)
@@ -7746,7 +7746,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("'1'");
 
@@ -7896,7 +7896,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("'N'");
 
                 entity.Property(e => e.HeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("HEADER_ID");
 
                 entity.Property(e => e.InfComments)
@@ -8007,7 +8007,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("'1'");
 
@@ -8109,7 +8109,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.HasIndex(e => e.HeaderId, "XXDY_INS_LOC_DETAILS_IDX");
 
                 entity.Property(e => e.DetailId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DETAIL_ID");
 
                 entity.Property(e => e.Actividad)
@@ -8119,7 +8119,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.Cant)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CANT")
                     .HasDefaultValueSql("'0'");
 
@@ -8141,7 +8141,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("'1'");
 
@@ -8181,7 +8181,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.DanoOrder)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DANO_ORDER");
 
                 entity.Property(e => e.DanoType)
@@ -8196,7 +8196,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.HeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("HEADER_ID");
 
                 entity.Property(e => e.LastUpdateDate)
@@ -8205,26 +8205,26 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("'1'");
 
                 entity.Property(e => e.LineId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LINE_ID");
 
                 entity.Property(e => e.LineNumber)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LINE_NUMBER")
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.PlannedHours)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PLANNED_HOURS")
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.ZoneId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ZONE_ID");
 
                 entity.Property(e => e.ZoneType)
@@ -8241,7 +8241,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_INS_LOCATIONS", "YARD");
 
                 entity.Property(e => e.LocationId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LOCATION_ID");
 
                 entity.Property(e => e.Comments)
@@ -8257,7 +8257,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("'1'");
 
@@ -8297,7 +8297,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.DanoOrder)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DANO_ORDER");
 
                 entity.Property(e => e.DanoType)
@@ -8306,7 +8306,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("DANO_TYPE");
 
                 entity.Property(e => e.HeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("HEADER_ID");
 
                 entity.Property(e => e.LastUpdateDate)
@@ -8315,16 +8315,16 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("'1'");
 
                 entity.Property(e => e.LineId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LINE_ID");
 
                 entity.Property(e => e.TotalImages)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("TOTAL_IMAGES")
                     .HasDefaultValueSql("'0'");
 
@@ -8342,11 +8342,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_INS_LOGS", "YARD");
 
                 entity.Property(e => e.LogId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LOG_ID");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("'1'");
 
@@ -8356,11 +8356,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.InspectionId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("INSPECTION_ID");
 
                 entity.Property(e => e.InspectorId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("INSPECTOR_ID");
             });
 
@@ -8372,11 +8372,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_MTL_ONHAND", "YARD");
 
                 entity.Property(e => e.InventoryItemId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("INVENTORY_ITEM_ID");
 
                 entity.Property(e => e.OrganizationId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ORGANIZATION_ID");
 
                 entity.Property(e => e.SubinventoryCode)
@@ -8395,7 +8395,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("ITEM_DESCRIPTION");
 
                 entity.Property(e => e.OnHand)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ON_HAND");
 
                 entity.Property(e => e.OrganizationCode)
@@ -8412,7 +8412,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_ODT_ATTACHMENTS", "YARD");
 
                 entity.Property(e => e.FileId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("FILE_ID");
 
                 entity.Property(e => e.AbsoluteName)
@@ -8428,7 +8428,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("'NEW'");
 
                 entity.Property(e => e.ApprovedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("APPROVED_BY")
                     .HasDefaultValueSql("NULL");
 
@@ -8445,7 +8445,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -8503,7 +8503,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.HeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("HEADER_ID");
 
                 entity.Property(e => e.LastUpdateDate)
@@ -8512,16 +8512,16 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
                 entity.Property(e => e.LineId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LINE_ID");
 
                 entity.Property(e => e.OrgId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ORG_ID");
 
                 entity.Property(e => e.RejectMotive)
@@ -8560,11 +8560,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_ODT_DISTRIBUTIONS", "YARD");
 
                 entity.Property(e => e.DistributionId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DISTRIBUTION_ID");
 
                 entity.Property(e => e.AssemblyItemId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ASSEMBLY_ITEM_ID");
 
                 entity.Property(e => e.Comments)
@@ -8574,7 +8574,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.ComponentQuantity)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("COMPONENT_QUANTITY");
 
                 entity.Property(e => e.ContextValue)
@@ -8584,7 +8584,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -8624,12 +8624,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.DeliveredQuantity)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DELIVERED_QUANTITY")
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.HeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("HEADER_ID");
 
                 entity.Property(e => e.ItemComponent)
@@ -8643,7 +8643,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("ITEM_DESCRIPTION");
 
                 entity.Property(e => e.ItemSequence)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ITEM_SEQUENCE");
 
                 entity.Property(e => e.LastUpdateDate)
@@ -8652,29 +8652,29 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
                 entity.Property(e => e.LineId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LINE_ID");
 
                 entity.Property(e => e.OnHandQuantity)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ON_HAND_QUANTITY")
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.OperationSeqNum)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("OPERATION_SEQ_NUM");
 
                 entity.Property(e => e.OrganizationId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ORGANIZATION_ID");
 
                 entity.Property(e => e.ParentId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PARENT_ID")
                     .HasDefaultValueSql("NULL");
 
@@ -8684,12 +8684,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("PRIMARY_UOM_CODE");
 
                 entity.Property(e => e.RequestedQuantity)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("REQUESTED_QUANTITY")
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.SwapQuantity)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("SWAP_QUANTITY")
                     .HasDefaultValueSql("0");
             });
@@ -8702,11 +8702,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_ODT_HEADERS", "YARD");
 
                 entity.Property(e => e.HeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("HEADER_ID");
 
                 entity.Property(e => e.BranchId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("BRANCH_ID")
                     .HasDefaultValueSql("1 ");
 
@@ -8728,7 +8728,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("CONTRACT_NUMBER");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -8738,12 +8738,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.CurrentReceiptId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CURRENT_RECEIPT_ID")
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CusdyDyWoHId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CUSDY_DY_WO_H_ID")
                     .HasDefaultValueSql("NULL\n");
 
@@ -8778,7 +8778,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CustomerId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CUSTOMER_ID");
 
                 entity.Property(e => e.CustomerName)
@@ -8787,17 +8787,17 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("CUSTOMER_NAME");
 
                 entity.Property(e => e.DeHeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DE_HEADER_ID")
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.DeLineId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DE_LINE_ID")
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.InsHeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("INS_HEADER_ID")
                     .HasDefaultValueSql("NULL");
 
@@ -8812,7 +8812,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -8864,12 +8864,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.ParentId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PARENT_ID")
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.PlannedHours)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PLANNED_HOURS")
                     .HasDefaultValueSql("NULL");
 
@@ -8879,7 +8879,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("PLATE_NUMBER");
 
                 entity.Property(e => e.PriorityCode)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PRIORITY_CODE")
                     .HasDefaultValueSql("99 ");
 
@@ -8906,7 +8906,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("SERIAL_NUMBER");
 
                 entity.Property(e => e.TeamId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("TEAM_ID")
                     .HasDefaultValueSql("NULL");
 
@@ -8921,7 +8921,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("VIN");
 
                 entity.Property(e => e.WorkHours)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("WORK_HOURS")
                     .HasDefaultValueSql("NULL");
             });
@@ -8934,7 +8934,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_ODT_LINES", "YARD");
 
                 entity.Property(e => e.LineId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LINE_ID");
 
                 entity.Property(e => e.ApprovalDate)
@@ -8943,12 +8943,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.ApprovedQuantity)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("APPROVED_QUANTITY")
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.ApproverId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("APPROVER_ID")
                     .HasDefaultValueSql("NULL");
 
@@ -8983,7 +8983,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -9029,7 +9029,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("'N' ");
 
                 entity.Property(e => e.DeletedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DELETED_BY")
                     .HasDefaultValueSql("NULL");
 
@@ -9045,7 +9045,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.HeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("HEADER_ID");
 
                 entity.Property(e => e.LastUpdateDate)
@@ -9054,7 +9054,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -9088,26 +9088,26 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("'N'");
 
                 entity.Property(e => e.PlannedHours)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PLANNED_HOURS")
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.Quantity)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("QUANTITY");
 
                 entity.Property(e => e.TeamId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("TEAM_ID")
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.WorkHours)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("WORK_HOURS")
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.ZoneId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ZONE_ID");
             });
 
@@ -9119,11 +9119,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_ODT_RCV_LINES", "YARD");
 
                 entity.Property(e => e.RcvLineId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("RCV_LINE_ID");
 
                 entity.Property(e => e.ApprovedQuantity)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("APPROVED_QUANTITY")
                     .HasDefaultValueSql("0");
 
@@ -9140,7 +9140,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -9180,12 +9180,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.DeliveredQuantity)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DELIVERED_QUANTITY")
                     .HasDefaultValueSql("0");
 
                 entity.Property(e => e.DistributionId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DISTRIBUTION_ID");
 
                 entity.Property(e => e.ItemComponent)
@@ -9199,25 +9199,25 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
                 entity.Property(e => e.OrganizationId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ORGANIZATION_ID");
 
                 entity.Property(e => e.RcvHeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("RCV_HEADER_ID");
 
                 entity.Property(e => e.ReceivedQuantity)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("RECEIVED_QUANTITY")
                     .HasDefaultValueSql("0");
 
                 entity.Property(e => e.RequestedQuantity)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("REQUESTED_QUANTITY")
                     .HasDefaultValueSql("0");
             });
@@ -9230,7 +9230,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_ODT_RECEIPTS", "YARD");
 
                 entity.Property(e => e.RcvHeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("RCV_HEADER_ID");
 
                 entity.Property(e => e.ApprovalDate)
@@ -9238,11 +9238,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("APPROVAL_DATE");
 
                 entity.Property(e => e.ApproverId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("APPROVER_ID");
 
                 entity.Property(e => e.BranchId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("BRANCH_ID")
                     .HasDefaultValueSql("NULL");
 
@@ -9258,7 +9258,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -9298,7 +9298,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.DispatchBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DISPATCH_BY");
 
                 entity.Property(e => e.DispatchDate)
@@ -9311,12 +9311,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
                 entity.Property(e => e.OdtHeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ODT_HEADER_ID");
 
                 entity.Property(e => e.RcvDate)
@@ -9337,7 +9337,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.TeamId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("TEAM_ID")
                     .HasDefaultValueSql("NULL");
             });
@@ -9352,7 +9352,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.HasIndex(e => new { e.PersonId, e.PeriodYear, e.WeekNumber }, "XXDY_ODT_WORK_LOAD_IDX");
 
                 entity.Property(e => e.WorkloadId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("WORKLOAD_ID");
 
                 entity.Property(e => e.ContextValue)
@@ -9362,7 +9362,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("'1'");
 
@@ -9407,28 +9407,28 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("'1'");
 
                 entity.Property(e => e.OdtHeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ODT_HEADER_ID");
 
                 entity.Property(e => e.PeriodId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PERIOD_ID");
 
                 entity.Property(e => e.PeriodYear)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PERIOD_YEAR");
 
                 entity.Property(e => e.PersonId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PERSON_ID");
 
                 entity.Property(e => e.TeamId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("TEAM_ID");
 
                 entity.Property(e => e.TerminationDate)
@@ -9436,11 +9436,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("TERMINATION_DATE");
 
                 entity.Property(e => e.WeekNumber)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("WEEK_NUMBER");
 
                 entity.Property(e => e.WorkHours)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("WORK_HOURS");
             });
 
@@ -9452,7 +9452,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_ODT_WORK_LOGS", "YARD");
 
                 entity.Property(e => e.LogId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LOG_ID");
 
                 entity.Property(e => e.ContextValue)
@@ -9462,7 +9462,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -9507,7 +9507,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.HeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("HEADER_ID");
 
                 entity.Property(e => e.LastUpdateDate)
@@ -9516,7 +9516,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -9532,7 +9532,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.WorkHours)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("WORK_HOURS")
                     .HasDefaultValueSql("0 ");
             });
@@ -9545,11 +9545,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_PROCESS_DRAFT", "YARD");
 
                 entity.Property(e => e.InterfaceId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("INTERFACE_ID");
 
                 entity.Property(e => e.ActivationId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ACTIVATION_ID");
 
                 entity.Property(e => e.ApiErrorLoc)
@@ -9578,11 +9578,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.DeLineId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DE_LINE_ID");
 
                 entity.Property(e => e.DeliveryId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DELIVERY_ID");
 
                 entity.Property(e => e.ProcessDate)
@@ -9612,7 +9612,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_REBILL_HEADERS", "YARD");
 
                 entity.Property(e => e.InterfaceId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("INTERFACE_ID");
 
                 entity.Property(e => e.ContextValue)
@@ -9627,7 +9627,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("CONTRACT_NUMBER");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -9687,7 +9687,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("EJE2_ESPESOR_BALATA");
 
                 entity.Property(e => e.InsHeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("INS_HEADER_ID");
 
                 entity.Property(e => e.LastUpdateDate)
@@ -9696,7 +9696,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -9726,7 +9726,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("PLACA_VIN");
 
                 entity.Property(e => e.RbHeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("RB_HEADER_ID");
 
                 entity.Property(e => e.SerialNumber)
@@ -9759,11 +9759,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_REBILL_LINES", "YARD");
 
                 entity.Property(e => e.InterfaceLineId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("INTERFACE_LINE_ID");
 
                 entity.Property(e => e.Cantidad)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CANTIDAD");
 
                 entity.Property(e => e.ContextValue)
@@ -9778,7 +9778,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("CONTRACT_NUMBER");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -9833,11 +9833,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("FALLA");
 
                 entity.Property(e => e.InsDetailId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("INS_DETAIL_ID");
 
                 entity.Property(e => e.InsHeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("INS_HEADER_ID");
 
                 entity.Property(e => e.InsType)
@@ -9846,7 +9846,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("INS_TYPE");
 
                 entity.Property(e => e.InterfaceId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("INTERFACE_ID");
 
                 entity.Property(e => e.ItemCode)
@@ -9860,7 +9860,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -9880,11 +9880,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("PATIO");
 
                 entity.Property(e => e.RbHeaderId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("RB_HEADER_ID");
 
                 entity.Property(e => e.RbLineId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("RB_LINE_ID");
 
                 entity.Property(e => e.SerialNumber)
@@ -9912,11 +9912,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_REBILL_STATUS", "YARD");
 
                 entity.Property(e => e.DetailId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DETAIL_ID");
 
                 entity.Property(e => e.Amount)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("AMOUNT");
 
                 entity.Property(e => e.BranchName)
@@ -9931,7 +9931,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -10002,7 +10002,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -10022,7 +10022,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("PLATE_NUMBER");
 
                 entity.Property(e => e.RebillGroupId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("REBILL_GROUP_ID");
 
                 entity.Property(e => e.ReturnDate)
@@ -10051,7 +10051,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .IsUnique();
 
                 entity.Property(e => e.BranchId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("BRANCH_ID");
 
                 entity.Property(e => e.ActiveFlag)
@@ -10107,7 +10107,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -10159,7 +10159,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.EntityId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ENTITY_ID");
 
                 entity.Property(e => e.Fax)
@@ -10174,7 +10174,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE\n");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -10222,7 +10222,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_SYS_ITEMS", "YARD");
 
                 entity.Property(e => e.InventoryItemId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("INVENTORY_ITEM_ID");
 
                 entity.Property(e => e.Description)
@@ -10257,7 +10257,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .IsUnique();
 
                 entity.Property(e => e.EntityId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ENTITY_ID");
 
                 entity.Property(e => e.ActiveFlag)
@@ -10309,7 +10309,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -10377,7 +10377,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -10441,7 +10441,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .IsUnique();
 
                 entity.Property(e => e.ListCodeId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LIST_CODE_ID");
 
                 entity.Property(e => e.ContextValue)
@@ -10451,7 +10451,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -10502,7 +10502,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -10517,7 +10517,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("MEANING");
 
                 entity.Property(e => e.OrgId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ORG_ID")
                     .HasDefaultValueSql("NULL");
 
@@ -10539,7 +10539,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .IsUnique();
 
                 entity.Property(e => e.ListValueId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LIST_VALUE_ID");
 
                 entity.Property(e => e.ContextValue)
@@ -10549,7 +10549,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -10606,7 +10606,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -10616,12 +10616,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("LIST_CODE");
 
                 entity.Property(e => e.ListCodeId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LIST_CODE_ID")
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.ListOrder)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LIST_ORDER")
                     .HasDefaultValueSql("'10' ");
 
@@ -10636,7 +10636,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("MEANING");
 
                 entity.Property(e => e.OrgId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ORG_ID")
                     .HasDefaultValueSql("NULL");
             });
@@ -10649,7 +10649,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_SYS_MENUS", "YARD");
 
                 entity.Property(e => e.MenuId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("MENU_ID");
 
                 entity.Property(e => e.ContextValue)
@@ -10659,7 +10659,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -10699,7 +10699,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.DefaultPageId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DEFAULT_PAGE_ID")
                     .HasDefaultValueSql("NULL");
 
@@ -10727,7 +10727,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -10751,7 +10751,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_SYS_MENU_ITEMS", "YARD");
 
                 entity.Property(e => e.MenuItemId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("MENU_ITEM_ID");
 
                 entity.Property(e => e.ContextValue)
@@ -10761,7 +10761,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -10816,7 +10816,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("INSERT_ALLOWED");
 
                 entity.Property(e => e.ItemOrder)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ITEM_ORDER");
 
                 entity.Property(e => e.LastUpdateDate)
@@ -10825,20 +10825,20 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
                 entity.Property(e => e.MenuId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("MENU_ID");
 
                 entity.Property(e => e.ModuleId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("MODULE_ID");
 
                 entity.Property(e => e.PageId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PAGE_ID")
                     .HasDefaultValueSql("NULL");
 
@@ -10856,7 +10856,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_SYS_MODULES", "YARD");
 
                 entity.Property(e => e.ModuleId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("MODULE_ID");
 
                 entity.Property(e => e.ContextValue)
@@ -10866,7 +10866,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -10917,7 +10917,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -10927,7 +10927,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("MODULE_CODE");
 
                 entity.Property(e => e.ModuleIcon)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("MODULE_ICON")
                     .HasDefaultValueSql("1 ");
 
@@ -10948,7 +10948,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .IsUnique();
 
                 entity.Property(e => e.PageId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PAGE_ID");
 
                 entity.Property(e => e.ContextValue)
@@ -10958,7 +10958,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -11019,12 +11019,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
                 entity.Property(e => e.ModuleId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("MODULE_ID");
 
                 entity.Property(e => e.PageCode)
@@ -11038,7 +11038,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("PAGE_NAME");
 
                 entity.Property(e => e.PageOrder)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PAGE_ORDER");
 
                 entity.Property(e => e.ParamText)
@@ -11065,7 +11065,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .IsUnique();
 
                 entity.Property(e => e.UserId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("USER_ID");
 
                 entity.Property(e => e.AdminFlag)
@@ -11086,7 +11086,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -11126,7 +11126,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CustomerId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CUSTOMER_ID")
                     .HasDefaultValueSql("NULL");
 
@@ -11142,7 +11142,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("EMAIL_ADDRESS");
 
                 entity.Property(e => e.EmployeeId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("EMPLOYEE_ID")
                     .HasDefaultValueSql("NULL");
 
@@ -11186,7 +11186,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -11203,7 +11203,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.RmaMenuId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("RMA_MENU_ID")
                     .HasDefaultValueSql("NULL");
             });
@@ -11216,7 +11216,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_SYS_USER_LOGS", "YARD");
 
                 entity.Property(e => e.LogId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LOG_ID");
 
                 entity.Property(e => e.AppVersion)
@@ -11230,7 +11230,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("LAST_LOGIN_DATE");
 
                 entity.Property(e => e.UserId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("USER_ID");
             });
 
@@ -11242,7 +11242,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                 entity.ToTable("XXDY_SYS_USER_PARAMS", "YARD");
 
                 entity.Property(e => e.UserId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("USER_ID");
 
                 entity.Property(e => e.ContextValue)
@@ -11252,7 +11252,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("1");
 
@@ -11303,12 +11303,12 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("1");
 
                 entity.Property(e => e.PasswordAttempts)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PASSWORD_ATTEMPTS");
 
                 entity.Property(e => e.PasswordReset)
@@ -11340,11 +11340,11 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("ITEM_NAME");
 
                 entity.Property(e => e.ListLineId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LIST_LINE_ID");
 
                 entity.Property(e => e.Operand)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("OPERAND");
 
                 entity.Property(e => e.ProductAttrValue)
@@ -11520,7 +11520,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("NULL");
 
                 entity.Property(e => e.CreatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("CREATED_BY")
                     .HasDefaultValueSql("-1");
 
@@ -11539,7 +11539,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("DATE_CONTRACT_MARCO");
 
                 entity.Property(e => e.DlCustomerId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("DL_CUSTOMER_ID");
 
                 entity.Property(e => e.DoorNumber)
@@ -11560,7 +11560,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("FIRST_NAME");
 
                 entity.Property(e => e.FolioDl)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("FOLIO_DL");
 
                 entity.Property(e => e.GuaranteeFlag)
@@ -11592,7 +11592,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("SYSDATE");
 
                 entity.Property(e => e.LastUpdatedBy)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("LAST_UPDATED_BY")
                     .HasDefaultValueSql("-1\n");
 
@@ -11620,7 +11620,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasDefaultValueSql("'N'");
 
                 entity.Property(e => e.ParticipantId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("PARTICIPANT_ID");
 
                 entity.Property(e => e.Province)
@@ -11673,7 +11673,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("REL_REGISTRATION_INFORMATION");
 
                 entity.Property(e => e.RelationContractId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("RELATION_CONTRACT_ID");
 
                 entity.Property(e => e.ResourceOwner)
@@ -11688,7 +11688,7 @@ namespace TipMexico.DigitalYard.Infrastructure.Data
                     .HasColumnName("RFC_CONTACT");
 
                 entity.Property(e => e.RolId)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(9,0)")
                     .HasColumnName("ROL_ID");
 
                 entity.Property(e => e.ShareholderFlag)

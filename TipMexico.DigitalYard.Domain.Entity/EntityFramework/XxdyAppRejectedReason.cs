@@ -5,9 +5,9 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
 {
     public partial class XxdyAppRejectedReason
     {
-        public decimal ReasonId { get; set; }
-        public decimal DisplayOrder { get; set; }
-        public decimal DocumentId { get; set; }
+        public int ReasonId { get; set; }
+        public int DisplayOrder { get; set; }
+        public int DocumentId { get; set; }
         public string? ReasonCode { get; set; }
         public string? Description { get; set; }
         public string EnabledFlag { get; set; } = null!;
@@ -17,9 +17,9 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
         public string? CustomField3 { get; set; }
         public string? CustomField4 { get; set; }
         public string? CustomField5 { get; set; }
-        public decimal? CreatedBy { get; set; }
+        public int? CreatedBy { get; set; }
         public DateTime? CreationDate { get; set; }
-        public decimal? LastUpdatedBy { get; set; }
+        public int? LastUpdatedBy { get; set; }
         public DateTime? LastUpdateDate { get; set; }
     }
 }

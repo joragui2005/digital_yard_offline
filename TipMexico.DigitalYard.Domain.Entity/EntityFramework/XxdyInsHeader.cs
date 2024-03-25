@@ -6,7 +6,7 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
     public partial class XxdyInsHeader
     {
         public int HeaderId { get; set; }
-        public decimal BranchId { get; set; }
+        public int BranchId { get; set; }
         public string SerialNumber { get; set; } = null!;
         public string? Vin { get; set; }
         public DateTime? EntryDate { get; set; }
@@ -17,18 +17,18 @@ namespace TipMexico.DigitalYard.Domain.Entity.EntityFramework
         public string TrxType { get; set; } = null!;
         public string MovementType { get; set; } = null!;
         public string InspectStatus { get; set; } = null!;
-        public decimal? ActualInspector { get; set; }
+        public int? ActualInspector { get; set; }
         public string? ContextValue { get; set; }
         public string? CustomField1 { get; set; }
         public string? CustomField2 { get; set; }
         public string? CustomField3 { get; set; }
         public string? CustomField4 { get; set; }
         public string? CustomField5 { get; set; }
-        public decimal? DeHeaderId { get; set; }
-        public decimal? DeLineId { get; set; }
-        public decimal? CreatedBy { get; set; }
+        public int? DeHeaderId { get; set; }
+        public int? DeLineId { get; set; }
+        public int? CreatedBy { get; set; }
         public DateTime? CreationDate { get; set; }
-        public decimal? LastUpdatedBy { get; set; }
+        public int? LastUpdatedBy { get; set; }
         public DateTime? LastUpdateDate { get; set; }
         public string? Comments { get; set; }
         public string? OperationType { get; set; }

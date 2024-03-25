@@ -1,0 +1,15 @@
+Using default tag: latest
+latest: Pulling from library/sonarqube
+23828d760c7b: Pulling fs layer
+e2670537dceb: Pulling fs layer
+3c059ccfa418: Pulling fs layer
+a23d33d59f2a: Pulling fs layer
+842a648f5439: Pulling fs layer
+77836e5f0579: Pulling fs layer
+0e25cb962436: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+77836e5f0579: Waiting
+0e25cb962436: Waiting
+4f4fb700ef54: Waiting
+a23d33d59f2a: Waiting
+842a648f5439: Waiting
